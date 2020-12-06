@@ -46,14 +46,14 @@ public class Sparsearray {
         sparseArr[0][1] = 11;
         sparseArr[0][2] = sum;
         // 遍历二维数组，将非0的值存放到 sparseArr中
-        int count = 0;//count 用于记录是第几个非0数据
+        int count = 1;//count 用于记录是第几个非0数据
         for (int i = 0; i < 11; i++) {
             for (int j = 0; j < 11; j++) {
                 if (chessArr1[i][j] != 0) {
-                    count++;
                     sparseArr[count][0]=i;
                     sparseArr[count][1]=j;
                     sparseArr[count][2]=chessArr1[i][j];
+                    count++;
                 }
             }
         }
