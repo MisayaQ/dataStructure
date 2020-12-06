@@ -9,6 +9,7 @@ package com.atguigu.training;
  **/
 public class AAAA {
     public static void main(String[] args) {
-        System.out.println(Integer.parseInt("0"));
+        int a = 44444;
+        System.out.println((a+"").length());
     }
 }

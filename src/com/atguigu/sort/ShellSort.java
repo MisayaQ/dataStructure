@@ -25,8 +25,8 @@ public class ShellSort {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String date1Str = simpleDateFormat.format(data1);
         System.out.println("排序前的时间是=" + date1Str);
-//        shellSort(arr);
-        shellSort2(arr);
+        shellSort(arr);
+//        shellSort2(arr);
         Date data2 = new Date();
         String date2Str = simpleDateFormat.format(data2);
         System.out.println("排序前的时间是=" + date2Str);
