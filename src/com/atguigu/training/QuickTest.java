@@ -1,5 +1,7 @@
 package com.atguigu.training;
 
+import java.util.Arrays;
+
 /**
  * @program: dataStructure
  * @description: 快速排序-填坑
@@ -9,32 +11,44 @@ package com.atguigu.training;
  **/
 public class QuickTest {
     public static void main(String[] args) {
-
+        int[] arr = {-9,78,0,23,-567,70, -1,900, 4561};
+        quickSort(arr, 0, arr.length - 1);
+        System.out.println("arr=" + Arrays.toString(arr));
     }
-    public static void quickSort(int[] arr, int startIndex, int endIndex) {
-        // 递归结束条件：startIndex大等于endIndex的时候
-        if (startIndex >= endIndex) {
-            return;
-        }
-        //得到基准元素位置
-//        int
-    }
-/*    private static int partition(int[] arr, int startIndex, int endIndex) {
-        //取到第一个位置的元素作为基准元素
-        int pivot = arr[startIndex];
-        int left = startIndex;
-        int right = endIndex;
-        //填坑的位置
-        int index = startIndex;
-        //大循环在左右指针重合或者交错时结束
-        while (right >= left) {
-            //right指针从右向左进行比较
-            while (right >= left) {
-                if (arr[right] < pivot) {
-
-                }
+    public static void quickSort(int[] arr, int left, int right) {
+        int l = left;
+        int r = right;
+        int pivot = arr[(left + right) / 2];
+        int temp = 0;
+        while (l < r) {
+            while (arr[l] < pivot) {
+                l += 1;
+            }
+            while (arr[r] > pivot) {
+                r -= 1;
+            }
+            if (l >= r) {
+                break;
+            }
+            temp = arr[l];
+            arr[l] = arr[r];
+            arr[r] = temp;
+            if (arr[l] == pivot) {
+                r -= 1;
+            }
+            if (arr[r] == pivot) {
+                l += 1;
             }
         }
-
-    }*/
+        if (l == r) {
+            l += 1;
+            r -= 1;
+        }
+        if (left < r) {
+            quickSort(arr, left, r);
+        }
+        if (right > l) {
+            quickSort(arr, l, right);
+        }
+    }
 }

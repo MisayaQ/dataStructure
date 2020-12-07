@@ -17,20 +17,19 @@ public class BubbleTest {
         for (int i = 0; i < arr.length - 1; i++) {
             for (int j = 0; j < arr.length - 1 - i; j++) {
                 if (arr[j] > arr[j + 1]) {
-                    flag = true;//如果发生了交换 将flag置为true 记得后面进行恢复为false
                     temp = arr[j];
                     arr[j] = arr[j + 1];
                     arr[j + 1] = temp;
+                    flag = true;
                 }
             }
-            if (!flag) {//在一次排序中 一次交换都没有发生过 说明排序完成
+            if (!flag) {
                 break;
             } else {
-                flag = false;//重置flag进行下次的判断
+                flag = false;
             }
-            System.out.println("第"+(i+1)+"趟排序后的数组：");
-            System.out.println(Arrays.toString(arr));
         }
+        System.out.println(Arrays.toString(arr));
 
 
     }
