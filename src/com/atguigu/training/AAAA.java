@@ -8,8 +8,20 @@ package com.atguigu.training;
  * @create: 2020-10-30 10:07
  **/
 public class AAAA {
-    public static void main(String[] args) {
-        int a = 44444;
-        System.out.println((a+"").length());
+    private String name;
+
+    public AAAA() {
+    }
+
+    public AAAA(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }
