@@ -24,4 +24,20 @@ public class AAAA {
     public void setName(String name) {
         this.name = name;
     }
+
+    @Override
+    public String toString() {
+        return "AAAA{" +
+                "name='" + name + '\'' +
+                '}';
+    }
+
+    public static void main(String[] args) {
+        AAAA aaaa = new AAAA("123");
+        AAAA bbb = null;
+        bbb = aaaa;
+        bbb.setName("321");
+        System.out.println(aaaa);
+        System.out.println(bbb);
+    }
 }
