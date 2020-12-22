@@ -8,7 +8,7 @@ import java.util.List;
 
 /**
  * @program: dataStructure
- * @description:
+ * @description: 两个List去重
  * @version: 1.0
  * @author: LiuJiaQi
  * @create: 2020-12-22 17:51
